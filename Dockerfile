@@ -5,5 +5,5 @@ RUN mvn clean package -DskipTests
 FROM amazoncorretto:21-alpine
 
 COPY --from=build target/*.jar app.jar
-EXPOSE 8081
+EXPOSE 9090
 CMD ["java", "-jar", "/app.jar"]
